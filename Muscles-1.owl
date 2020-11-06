@@ -1,0 +1,2353 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <Ontology>
+        <rdfs:comment>This ontology describes various types of muscular exercises based on the group of muscles aimed</rdfs:comment>
+    </Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#BuildUp -->
+
+    <ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#BuildUp">
+        <inverseOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:range rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Muscle"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel -->
+
+    <ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:range rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Difficulty"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy -->
+
+    <ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#IsNeeded -->
+
+    <ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#IsNeeded">
+        <inverseOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Needs"/>
+        <rdfs:domain rdf:resource="http://www.pizza.com/ontologies/pizza.owl#MaterialNeeded"/>
+        <rdfs:range rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Needs -->
+
+    <ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#Needs">
+        <rdfs:domain rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:range rdf:resource="http://www.pizza.com/ontologies/pizza.owl#MaterialNeeded"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Barbells -->
+
+    <Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Barbells">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#MaterialNeeded"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsNeeded"/>
+                        <someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Barbells"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsNeeded"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#GoodMorning"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsNeeded"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OverheadPress"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsNeeded"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Skullcrusher"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsNeeded"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#StiffLeggedDeadlift"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Bench -->
+
+    <Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Bench">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#MaterialNeeded"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsNeeded"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#BenchPress"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsNeeded"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#InclinedBenchPress"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Crunch_Machine -->
+
+    <Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Crunch_Machine">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#MaterialNeeded"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsNeeded"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#AssistedCrunches"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#DomainThing -->
+
+    <Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#DomainThing"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Drawbar -->
+
+    <Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Drawbar">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#MaterialNeeded"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsNeeded"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#ChinPull"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsNeeded"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#FrontLever"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsNeeded"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#PullUp"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Dumbbells -->
+
+    <Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Dumbbells">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#MaterialNeeded"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsNeeded"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#BicepsCurl"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsNeeded"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#FrontRaise"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsNeeded"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#GoodMorning"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsNeeded"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#L-fly"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsNeeded"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#LateralRaise"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsNeeded"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OverheadPress"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Lat_Pulldown_Machine -->
+
+    <Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Lat_Pulldown_Machine">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#MaterialNeeded"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsNeeded"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#PullDown"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Leg_Curl_Machine -->
+
+    <Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Leg_Curl_Machine">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#MaterialNeeded"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsNeeded"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#LegCurl"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsNeeded"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#LegExtension"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Leg_Press -->
+
+    <Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Leg_Press">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#MaterialNeeded"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsNeeded"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Press"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Rings -->
+
+    <Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Rings">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#MaterialNeeded"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsNeeded"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#AndrieusCoil"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsNeeded"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#AustralianPullUp"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Rowing_Machine -->
+
+    <Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Rowing_Machine">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#MaterialNeeded"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsNeeded"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Rowing"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ValuePartition -->
+
+    <Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#ValuePartition"/>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Abdomen -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Abdomen">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Torso"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Deadlift"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Squat"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#StiffLeggedDeadlift"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Adductors -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Adductors">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Thigh"/>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#AndrieusCoil -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#AndrieusCoil">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Forearm"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Easy"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Needs"/>
+                        <allValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Rings"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Anterior -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Anterior">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Shoulder"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Dips"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#FrontRaise"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#HandstandPress"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#InclinedBenchPress"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OverheadPress"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#PushUp"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Arm -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Arm">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#UpperLimbs"/>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#AssistedCrunches -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#AssistedCrunches">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#RectusAbdominis"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#TransversusAbdominis"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Medium"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Needs"/>
+                        <allValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Crunch_Machine"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#AustralianPullUp -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#AustralianPullUp">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Biceps"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Forearm"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#LatissimusDorsi"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Trapezius"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Medium"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Needs"/>
+                        <allValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Rings"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Back -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Back">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Torso"/>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#BenchPress -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#BenchPress">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Thorax"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Triceps"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Needs"/>
+                        <someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Bench"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Medium"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Biceps -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Biceps">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Arm"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#AustralianPullUp"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#BicepsCurl"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#FrontLever"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#PullDown"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#PullUp"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Rowing"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#BicepsCurl -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#BicepsCurl">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Biceps"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Easy"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Needs"/>
+                        <allValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Dumbbells"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#BodyRaise -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#BodyRaise">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Lumbar"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Medium"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Calves -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Calves">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#LowerLimbs"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Calves"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#ChinPull -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#ChinPull">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Lumbar"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Medium"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Needs"/>
+                        <allValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Drawbar"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Crunches -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Crunches">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#RectusAbdominis"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#TransversusAbdominis"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Medium"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Deadlift -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Deadlift">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Abdomen"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Forearm"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Gluteus"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Lumbar"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Thigh"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Trapezius"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Hard"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Needs"/>
+                        <allValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Barbells"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Difficulty -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Difficulty">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#ValuePartition"/>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Dips -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Dips">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Anterior"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Thorax"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Triceps"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Medium"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Easy -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Easy">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Difficulty"/>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Exercise -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Exercise">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#DomainThing"/>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#ExternalObliqueMuscles -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#ExternalObliqueMuscles">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Abdomen"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#LateralCrunches"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#LatteralPlank"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Forearm -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Forearm">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#UpperLimbs"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#AndrieusCoil"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#AustralianPullUp"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Deadlift"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#FrontLever"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#PullDown"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#PullUp"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Rowing"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#StiffLeggedDeadlift"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#FrontLever -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#FrontLever">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Biceps"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Forearm"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#LatissimusDorsi"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#RectusAbdominis"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#TransversusAbdominis"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Hard"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Needs"/>
+                        <allValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Drawbar"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#FrontRaise -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#FrontRaise">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Anterior"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Medium"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Needs"/>
+                <allValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Dumbbells"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Gastrocnemius -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Gastrocnemius">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Calves"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#LegCurl"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#PistolSquat"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#SeatedCamel"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Squat"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Gluteus -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Gluteus">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#LowerLimbs"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Deadlift"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#GoodMorning"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Maximus"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Medius"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Minimus"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#PistolSquat"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Press"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Squat"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#StiffLeggedDeadlift"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#GoodMorning -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#GoodMorning">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Gluteus"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Ischio"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Lumbar"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Needs"/>
+                        <someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Barbells"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Needs"/>
+                        <someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Dumbbells"/>
+                    </Restriction>
+                </unionOf>
+            </Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Medium"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#HandstandPress -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#HandstandPress">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Anterior"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Lateral"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Thorax"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Triceps"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Hard"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Hard -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Hard">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Difficulty"/>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#InclinedBenchPress -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#InclinedBenchPress">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Anterior"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Thorax"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Triceps"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Hard"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Needs"/>
+                        <allValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Bench"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#InternalObliqueMuscles -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#InternalObliqueMuscles">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Abdomen"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#LateralCrunches"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#LatteralPlank"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Ischio -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Ischio">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Thigh"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#GoodMorning"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#LegCurl"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#NordicCurl"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Press"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#L-fly -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#L-fly">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Posterior"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Medium"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Needs"/>
+                        <allValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Dumbbells"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Lateral -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Lateral">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Shoulder"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#HandstandPress"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#LateralRaise"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OverheadPress"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#LateralCrunches -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#LateralCrunches">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#ExternalObliqueMuscles"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#InternalObliqueMuscles"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Medium"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#LateralRaise -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#LateralRaise">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Lateral"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Medium"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Needs"/>
+                        <allValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Dumbbells"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#LatissimusDorsi -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#LatissimusDorsi">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Back"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#AustralianPullUp"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#FrontLever"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#PullDown"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#PullUp"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#LatteralPlank -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#LatteralPlank">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#ExternalObliqueMuscles"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#InternalObliqueMuscles"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Easy"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#LegCurl -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#LegCurl">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Gastrocnemius"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Ischio"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Easy"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Needs"/>
+                        <allValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Leg_Curl_Machine"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#LegExtension -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#LegExtension">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Quadriceps"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Easy"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Needs"/>
+                        <allValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Leg_Curl_Machine"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#LowerLimbs -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#LowerLimbs">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Muscle"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Lunges"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Lumbar -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Lumbar">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Back"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#BodyRaise"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#ChinPull"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Deadlift"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#GoodMorning"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Squat"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#StiffLeggedDeadlift"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Superman"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Lunges -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Lunges">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#LowerLimbs"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Medium"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#MaterialNeeded -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#MaterialNeeded">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#ValuePartition"/>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Maximus -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Maximus">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Gluteus"/>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Medium -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Medium">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Difficulty"/>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Medius -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Medius">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Gluteus"/>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Minimus -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Minimus">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Gluteus"/>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Muscle -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Muscle">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#DomainThing"/>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#NordicCurl -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#NordicCurl">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Ischio"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Medium"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OverheadPress -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OverheadPress">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Anterior"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Lateral"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#PectoralisMinor"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Triceps"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Needs"/>
+                        <someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Barbells"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Needs"/>
+                        <someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Dumbbells"/>
+                    </Restriction>
+                </unionOf>
+            </Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Hard"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#PectoralisMajor -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#PectoralisMajor">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Thorax"/>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#PectoralisMinor -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#PectoralisMinor">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Thorax"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OverheadPress"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#PistolSquat -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#PistolSquat">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Gastrocnemius"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Gluteus"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Thigh"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Hard"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Plank -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Plank">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#RectusAbdominis"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#TransversusAbdominis"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Easy"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Posterior -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Posterior">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Shoulder"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#L-fly"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Press -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Press">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Gluteus"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Ischio"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Quadriceps"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Medium"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Needs"/>
+                        <allValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Leg_Press"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#PullDown -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#PullDown">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Biceps"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Forearm"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#LatissimusDorsi"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Easy"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Needs"/>
+                        <allValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Lat_Pulldown_Machine"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#PullUp -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#PullUp">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Biceps"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Forearm"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#LatissimusDorsi"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Medium"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Needs"/>
+                <allValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Drawbar"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#PushUp -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#PushUp">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Anterior"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Thorax"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Triceps"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Easy"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Quadriceps -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Quadriceps">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Thigh"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#LegExtension"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Press"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#RectusAbdominis -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#RectusAbdominis">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Abdomen"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#AssistedCrunches"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Crunches"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#FrontLever"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Plank"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Rowing -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Rowing">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Biceps"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Forearm"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Trapezius"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Hard"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Needs"/>
+                <allValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Rowing_Machine"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#SeatedCamel -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#SeatedCamel">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Gastrocnemius"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Easy"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Shoulder -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Shoulder">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#UpperLimbs"/>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Skullcrusher -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Skullcrusher">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Triceps"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Medium"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Needs"/>
+                <allValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Barbells"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Soleus -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Soleus">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Calves"/>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Squat -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Squat">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Abdomen"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Gastrocnemius"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Gluteus"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Lumbar"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Thigh"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Hard"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#StandingCamel -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#StandingCamel">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Calves"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                        <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Medium"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#StiffLeggedDeadlift -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#StiffLeggedDeadlift">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Abdomen"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Forearm"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Gluteus"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Lumbar"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Thigh"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Trapezius"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Hard"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Needs"/>
+                <allValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Barbells"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Superman -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Superman">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Exercise"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#BuildUp"/>
+                <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Lumbar"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HasDifficultyLevel"/>
+                <allValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Easy"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Thigh -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Thigh">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#LowerLimbs"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Deadlift"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#PistolSquat"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Squat"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#StiffLeggedDeadlift"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Thorax -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Thorax">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Torso"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#BenchPress"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Dips"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#HandstandPress"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#InclinedBenchPress"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#PushUp"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Torso -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Torso">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Muscle"/>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#TransversusAbdominis -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#TransversusAbdominis">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Abdomen"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#AssistedCrunches"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Crunches"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#FrontLever"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Plank"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Trapezius -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Trapezius">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Back"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#AustralianPullUp"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Deadlift"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Rowing"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#StiffLeggedDeadlift"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#Triceps -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#Triceps">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Arm"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#BenchPress"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Dips"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#HandstandPress"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OverheadPress"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#PushUp"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#IsBuiltUpBy"/>
+                        <someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Skullcrusher"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#UpperLimbs -->
+
+    <Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#UpperLimbs">
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#Muscle"/>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#AndrieusCoil"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#AssistedCrunches"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#AustralianPullUp"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#BenchPress"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#BicepsCurl"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#BodyRaise"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#ChinPull"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#Crunches"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#Deadlift"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#Dips"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#FrontLever"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#FrontRaise"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#GoodMorning"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#HandstandPress"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#InclinedBenchPress"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#L-fly"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#LateralCrunches"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#LateralRaise"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#LatteralPlank"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#LegCurl"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#LegExtension"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#Lunges"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#NordicCurl"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OverheadPress"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#PistolSquat"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#Plank"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#Press"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#PullDown"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#PullUp"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#PushUp"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#Rowing"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#SeatedCamel"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#Skullcrusher"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#Squat"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#StandingCamel"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#StiffLeggedDeadlift"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#Superman"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#Easy"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#Hard"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#Medium"/>
+        </members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
